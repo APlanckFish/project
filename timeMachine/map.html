@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地图区域选择</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img class="head_img" src="img/map_title.png">
+			<p class="age">1996</p>
+		</div>
+
+		<div class="main_content">
+			<form>
+				<!-- 地区选择 -->
+				<input type="radio" name="addr" id="addr1" value="1" hidden>
+				<label for="addr1" class="dot dot1"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr2" value="2" hidden>
+				<label for="addr2" class="dot dot2"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr3" value="3" hidden>
+				<label for="addr3" class="dot dot3"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr4" value="4" hidden>
+				<label for="addr4" class="dot dot4"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr5" value="5" hidden>
+				<label for="addr5" class="dot dot5"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr6" value="6" hidden>
+				<label for="addr6" class="dot dot6"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr7" value="7" hidden>
+				<label for="addr7" class="dot dot7"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr8" value="8" hidden>
+				<label for="addr8" class="dot dot8"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr9" value="9" hidden>
+				<label for="addr9" class="dot dot9"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr10" value="10" hidden>
+				<label for="addr10" class="dot dot10"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr11" value="11" hidden>
+				<label for="addr11" class="dot dot11"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr12" value="12" hidden>
+				<label for="addr12" class="dot dot12"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<input type="radio" name="addr" id="addr13" value="13" hidden>
+				<label for="addr13" class="dot dot13"><div class="dot_2"><div class="dot_3"></div></div></label>
+
+				<img class="addr" src="img/addr.png">
+			</form>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script>
+$('input[type="radio"]').click(function(){
+	console.log($(this).val());/*选中的值*/
+	
+	var left = $(this).next().css('marginLeft');
+	var top =  parseInt($(this).next().css('marginTop'))-18;
+	$('.addr').addClass('active');
+	$('.addr').css({'margin-left':left,'margin-top':top});
+
+	/*停止动画*/
+	$(".dot").hide();
+
+	setTimeout(function(){
+		// ajax方法
+		window.location.href = 'eating.html';
+	},1500);
+})
+
+/*数字动画*/
+$('.age').animateNumber({ number: 1996 },1500);
+</script>
+</html>

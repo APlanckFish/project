@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>倒计时</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/countDown.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img class="head_img" src="img/cutdown_title.png">
+		</div>
+
+		<div class="main_content">
+			<p class="main_tit">距离到达还剩</p>
+			<div class="content_img"><img src="img/count_rili.png" alt=""></div>
+			<p class="count_day golden">102</p>
+			<p class="count_day_bottom golden">日倒计时</p>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script>
+	$(".main_body").click(function(){
+		setTimeout(function(){
+			window.location.href = 'takeAway.html';
+		},1500);
+	})
+
+	/*数字动画*/
+	$('.count_day').animateNumber({ number: 102 },2000);
+</script>
+</html>

@@ -1,0 +1,120 @@
+.main_content {
+	position:absolute;
+	top:40vw;
+	left:15vw;
+	width:70vw;
+	height:70vw;
+	/*background:red; */
+	background:url('../img/sex_bg2.png') 81% 11% no-repeat ;
+	background-size: cover;
+}
+
+/* .sex {
+  width:9.5vw;
+  height:9.5vw;
+  background:blue;
+  margin-top:31vw;
+} */
+
+.right {
+	float:right;
+	margin-right: 10.5vw;
+}
+
+.left {
+	margin-left: 11vw;
+}
+
+.arrow_left {
+  position: absolute;
+  top: 32.5vw;
+  left: 38vw;
+  width: 9vw;
+  height: 6vw;
+}
+
+.arrow_right {
+   position: absolute;
+   top:32.5vw;
+   right:38vw;
+   width: 9vw;
+   height: 6vw;
+}
+
+
+.arrow_right img,.arrow_left img {
+	width: 100%;
+	height: 100%;
+}
+
+.arrow_left_active{
+	  width: 15.3vw;
+    height: 15.3vw;
+    position: absolute;
+    top: 27.7vw;
+    left: 8vw;
+}
+
+.arrow_right_active{
+	width: 15.3vw;
+    height: 15.3vw;
+    position: absolute;
+    top: 27.7vw;
+    right: 8vw;
+}
+
+.arrow_left_active img ,.arrow_right_active img {
+	width: 100%;
+	height: 100%;
+}
+
+.active {
+	display: block;
+} 
+
+/*美化表单*/
+label {
+  position:relative;
+  display:inline-block;
+  width:9.5vw;
+  height:9.5vw;
+  /*background:blue;*/
+  margin-top:31vw;
+}
+
+label img {
+  width:100%;
+  height: 100%;
+}
+
+input[type="radio"]:checked + label:after {/*选中元素的后一个兄弟*/
+  content:'';/*对勾*/
+  display:inline-block;
+  color:#fff;
+  width:15vw;
+  height:15vw;
+  background:url('../img/sex_bg1.png');
+  background-size:cover;
+  opacity:1;
+  position:absolute;
+  top: -2.4vw;
+  left: -3vw;
+}
+
+.leftRight {
+  -webkit-animation: leftRight ease-in 1.5s both infinite;
+  animation: leftRight ease-in 1.5s both infinite;
+}
+
+@-webkit-keyframes leftRight {
+    0% { left:38vw;opacity:1;}
+    75% { left:32vw;opacity:.5;}
+    100% { left:38vw;opacity:1;}
+
+}
+
+@keyframes leftRight {
+    0% { left:38vw;opacity:1;}
+    75% { left:32vw;opacity:.5;}
+    100% { left:38vw;opacity:1;}
+}

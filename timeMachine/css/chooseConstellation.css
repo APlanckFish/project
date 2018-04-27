@@ -1,0 +1,121 @@
+.main_content {
+	position:absolute;
+	top:30vw;
+	left:5vw;
+	width:90vw;
+	height:135vw;
+    /*background: red;*/
+}
+
+.xz {
+	position: absolute;
+	top:20vw;
+	left: 15vw;
+	width: 16vw;
+	height: 16vw;
+	background: red;
+	border-radius: 8vw;
+}
+
+.xz img {
+	width:100%;
+	height:100%;
+}
+
+.xz1 {
+      top:6vw;
+      left:6vw;
+}
+
+.xz2 {
+	width: 18vw;
+	height: 18vw;
+	border-radius: 9vw;
+	top:4vw;
+	left: 66vw;
+}
+
+.xz3 {
+	width: 17.5vw;
+    height: 17.5vw;
+    border-radius: 9vw;
+    top: 22vw;
+    left: 33vw;
+}
+
+.xz4 {
+	width: 14vw;
+    height: 14vw;
+    border-radius: 7vw;
+    top: 50vw;
+    left: 3vw;
+}
+
+.xz5 {
+	width: 16vw;
+    height: 16vw;
+    border-radius: 8vw;
+    top: 41vw;
+    left: 57vw;
+}
+
+.xz6 {
+	width: 26vw;
+    height: 26vw;
+    border-radius: 13vw;
+    top: 61vw;
+    left: 30vw;
+	
+}
+
+.xz7 {
+	width: 16.5vw;
+    height: 16.5vw;
+    border-radius: 8.25vw;
+    top: 85vw;
+    left: 3vw;
+	
+}
+
+.xz8 {
+	width: 9vw;
+    height: 9vw;
+    border-radius: 4.5vw;
+    top: 101vw;
+    left: 43vw;
+}
+
+.xz9 {
+	width: 15vw;
+    height: 15vw;
+    border-radius: 7.5vw;
+    top: 72vw;
+    left: 71vw;
+}
+
+.xz10 {
+	width: 19vw;
+    height: 19vw;
+    border-radius: 9.5vw;
+    top: 97vw;
+    left: 61vw;
+}
+
+.xz11 {
+	width: 15vw;
+    height: 15vw;
+    border-radius: 7.5vw;
+    top: 113vw;
+    left: 15vw;
+	
+}
+
+.xz12 {
+	width: 15vw;
+    height: 15vw;
+    border-radius: 7.5vw;
+    top: 126vw;
+    left: 41vw;
+	
+}
+

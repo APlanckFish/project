@@ -1,0 +1,33 @@
+
+.head {
+	position:absolute;
+    top:10vw;
+	left:15vw;
+	width:70vw;
+	height:70vw;
+	/*background:red;*/
+}
+
+
+.mid {
+	position:absolute;
+    top:86vw;
+	left:25vw;
+	width:50vw;
+	height:40vw;
+	/*background:red;*/
+}
+
+.mid_img {
+	width:100%;
+	height:37vw;
+}
+
+.head img,.mid img {
+	width: 100%;
+	height: 100%;
+}
+
+.my_bottom_bt {
+	top:135vw;
+}

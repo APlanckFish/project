@@ -1,0 +1,247 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.clear {
+	clear:both;
+}
+
+ul  {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.main_body {
+	width:100%;
+	min-height:100vh;
+	background:#fff;
+	background:url('../img/back.png') 100% 100%;
+	background-size: cover;
+}
+
+/*公用标题*/
+.head_title {
+	position:absolute;
+	top:10vw;
+	left:25vw;
+	width:50vw;
+	height:15vw;
+	/*background:red;*/
+}
+
+.head_title img {
+	width: 100%;
+	height: 100%;
+}
+
+/*公用底部按钮*/
+.bottom_bt {
+	position:absolute;
+    top:150vw;
+	left:10vw;
+	width:80vw;
+	height:15vw;
+	/*background:black;*/
+}
+
+.bottom_bt img {
+	width:100%;
+	height:100%;
+}
+
+/*页面金色文字*/
+.main_tit {
+	text-align:center;
+	font-size:5vw;
+	color:#e2c080;
+}
+
+.golden {
+	color:#e2c080;
+}
+
+/*原点横线特效*/
+
+.line_wrap {
+	position:relative;
+	width:100%;
+	height:1vw;
+	background:black;
+}
+
+.dot {
+	position:absolute;
+	top:-.5vw;
+	/*left:0;*/
+	width:2vw;
+	height:2vw;
+	border-radius:50%;
+	background:black;
+}
+
+.at_right {
+	right:0;
+}
+
+/*蒙版样式*/
+.main_panel {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow:hidden;
+	width:100%;
+	height:100vh;
+	background:#000;
+	opacity:.7;
+	z-index:55;
+}
+
+.to_share {
+    position: fixed;
+    top: 6vw;
+    right: 8vw;
+    width: 56vw;
+    height: 42vw;
+    z-index: 66;
+}
+
+.btn {
+    position: fixed;
+    top: 53vw;
+    right: 26vw;
+    width: 27vw;
+    height: 9vw;
+    z-index: 66;
+}
+
+.to_share img, .btn img {
+	width:100%;
+	height:100%;
+}
+
+@media screen and (max-width: 736px) {
+    .main_body {
+	    min-height: 220vh !important;
+	}
+}
+
+
+/*上滑的箭头*/
+img .arrow {
+	position: absolute;
+	width: 10%;
+	height: 5%;
+	left: 45%;
+	bottom: 2%;
+	z-index: 300;
+	-webkit-animation: fadeInUp ease 1.5s both infinite;
+	animation: fadeInUp ease 1.5s both infinite;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% { -webkit-transform: translateY(100%);transform: translateY(100%); opacity:0;}
+    50% { -webkit-transform: translateY(0%);transform: translateY(0%); opacity:1;}
+    100% { -webkit-transform: translateY(-100%);transform: translateY(-100%); opacity:0;}
+
+}
+
+@keyframes fadeInUp {
+    0% { -webkit-transform: translateY(100%);transform: translateY(100%); opacity:0;}
+    50% { -webkit-transform: translateY(0%);transform: translateY(0%); opacity:1;}
+    100% { -webkit-transform: translateY(-100%);transform: translateY(-100%); opacity:0;}
+
+}
+ 
+/*左右滑动的箭头*/
+
+.leftRight {
+  -webkit-animation: leftRight ease-in 1.5s both infinite;
+  animation: leftRight ease-in 1.5s both infinite;
+}
+
+@-webkit-keyframes leftRight {
+    0% { left:38vw;opacity:1;}
+    75% { left:32vw;opacity:.5;}
+    100% { left:38vw;opacity:1;}
+
+}
+
+@keyframes leftRight {
+    0% { left:38vw;opacity:1;}
+    75% { left:32vw;opacity:.5;}
+    100% { left:38vw;opacity:1;}
+}
+
+.rightLeft {
+  -webkit-animation: rightLeft ease-in 1.5s both infinite;
+  animation: rightLeft ease-in 1.5s both infinite;
+}
+
+@-webkit-keyframes rightLeft {
+    0% { right:38vw;opacity:1;}
+    75% { right:32vw;opacity:.5;}
+    100% { right:38vw;opacity:1;}
+
+}
+
+@keyframes rightLeft {
+    0% { right:38vw;opacity:1;}
+    75% { right:32vw;opacity:.5;}
+    100% { right:38vw;opacity:1;}
+}
+
+
+.fall {
+	position: absolute;
+	left: 15vw;
+	top: 10vw;
+	z-index: 300;
+	-webkit-animation: fallDown ease-in 1s both;
+	animation: fallDown ease-in 1s both;
+	transform: translate3d(0, 0, 0); /* 强制硬件加速 */
+	-webkit-transform: translate3d(0, 0, 0); /* 强制硬件加速 */
+}
+
+@-webkit-keyframes fallDown {
+    0% { top:-30%;-webkit-transform: rotate(0deg);transform: rotate(0deg);  opacity:0;}
+    75% { top:5vw;-webkit-transform: rotate(45deg);transform: rotate(45deg); opacity:0.6;}
+/*     70% { top:20%;-webkit-transform: rotate(25deg);transform: rotate(25deg); opacity:0.8;}*/
+    100% { top:10vw; -webkit-transform: rotate(0deg);transform: rotate(0deg); opacity:1;}
+
+}
+
+@keyframes fallDown {
+      0% { top:-30%;-webkit-transform: rotate(0deg);transform: rotate(0deg);  opacity:0;}
+    75% { top:5vw;-webkit-transform: rotate(45deg);transform: rotate(45deg); opacity:0.6;}
+/*    70% { top:20%;-webkit-transform: rotate(25deg);transform: rotate(25deg); opacity:0.8;}*/
+    100% { top:10vw; -webkit-transform: rotate(0deg);transform: rotate(0deg); opacity:1;}
+}
+
+.fallDown {
+	top:76vw;
+	left:25vw;
+	z-index: 300;
+	-webkit-animation: down ease-in .5s both;
+	animation: down ease-in .5s both;
+	animation-delay:.8s;
+	transform: translate3d(0, 0, 0); /* 强制硬件加速 */
+	-webkit-transform: translate3d(0, 0, 0); /* 强制硬件加速 */
+}
+
+@-webkit-keyframes down {
+    0% { top:76vw;-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    75% { top:80vw;-webkit-transform: rotate(-25deg);transform: rotate(-25deg);}
+    100% { top:86vw;-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+
+}
+
+@keyframes down {
+    0% { top:76vw;-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    75% { top:80vw;-webkit-transform: rotate(-25deg);transform: rotate(-25deg);}
+    100% { top:86vw;-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+}

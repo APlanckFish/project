@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试结果</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img  src="img/result_title.png">
+		</div>
+
+		<div class="main_content">
+			<img class="sex" src="img/result_bg1.png">
+			<p class="first_p">您是位-<span class="result_one">文艺小资型的大叔</span></p>
+			<p>您的<span class="result_two">文艺值</span>超越了</p>
+			<p class="main"><span  class="result_main">99</span>%</p>
+			<p>的乘客</p>
+			<p>欢迎下次光临</p>
+			<!-- <a href="#"><img class="sex right" src=""></a> -->
+		</div>
+
+		<div class="bottom_bt my_bottom_bt">
+			<img src="img/result_bt.png">
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script>
+	$('.bottom_bt').click(function(){ 
+			window.location.href = 'register.html';
+	});
+
+	/*数字动画*/
+	$('.result_main').animateNumber({ number: 99 },2000);
+</script>
+</html>

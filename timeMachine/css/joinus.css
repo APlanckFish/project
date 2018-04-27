@@ -1,0 +1,22 @@
+.head_title {
+	width:90vw;
+	height:38vw;
+	left:3vw;
+}
+
+.main_content {
+    position: absolute;
+    top: 60vw;
+    height: 70vw;
+    width: 70vw;
+    left: 15vw;
+}
+
+.main_content img {
+	width:100%;
+	height:100%;
+}
+
+.bottom_bt {
+	top:137vw;
+}

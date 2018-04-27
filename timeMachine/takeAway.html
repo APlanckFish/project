@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>带点儿什么</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/takeAway.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img class="head_img" src="img/take_title.png">
+		</div>
+
+		<div class="main_content">
+			<form>
+				<input type="radio" name="take" id="take1" value="1" hidden>
+				<label for="take1" class="content_item"><img src="img/take_bt1.png" alt=""></label>
+				
+				<input type="radio" name="take" id="take2" value="2" hidden>
+				<label for="take2" class="content_item"><img src="img/take_bt2.png" alt=""></label>
+
+				<input type="radio" name="take" id="take3" value="3" hidden>
+				<label for="take3" class="content_item"><img src="img/take_bt3.png" alt=""></label>
+
+				<input type="radio" name="take" id="take4" value="4" hidden>
+				<label for="take4" class="content_item"><img src="img/take_bt4.png" alt=""></label>
+
+				<input type="radio" name="take" id="take5" value="5" hidden>
+				<label for="take5" class="content_item"><img src="img/take_bt5.png" alt=""></label>
+
+				<input type="radio" name="take" id="take6" value="6" hidden>
+				<label for="take6" class="content_item"><img src="img/take_bt6.png" alt=""></label>
+
+				<input type="radio" name="take" id="take7" value="7" hidden>
+				<label for="take7" class="content_item"><img src="img/take_bt7.png" alt=""></label>
+
+				<input type="radio" name="take" id="take8" value="8" hidden>
+				<label for="take8" class="content_item"><img src="img/take_bt8.png" alt=""></label>
+
+				<input type="radio" name="take" id="take9" value="9" hidden>
+				<label for="take9" class="content_item"><img src="img/take_bt9.png" alt=""></label>
+
+				<input type="radio" name="take" id="take10" value="10" hidden>
+				<label for="take10" class="content_item"><img src="img/take_bt10.png" alt=""></label>
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script>
+	$('input[type="radio"]').click(function(){ 
+		console.log($(this).val());//选中的值
+
+		/*加边框高亮*/
+		$(".content_item").removeClass('cur');
+		$(this).next().addClass('cur');
+
+		setTimeout(function(){
+			/*ajax成功后回调跳转*/
+			window.location.href = 'doingSomething.html';
+		},1500);
+	});
+</script>
+</html>

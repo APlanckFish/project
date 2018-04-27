@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册豪礼</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img class="head_img" src="img/register_title.png">
+		</div>
+
+		<div class="main_content">
+			<form>
+				<input type="radio" name="gifts" id="gifts1" value="1" hidden>
+				<label for="gifts1" class="content_item"><img src="img/register_1.png" alt=""></label>
+
+				<input type="radio" name="gifts" id="gifts2" value="2" hidden>
+				<label for="gifts2" class="content_item"><img src="img/register_2.png" alt=""></label>
+
+				<input type="radio" name="gifts" id="gifts3" value="3" hidden>
+				<label for="gifts3" class="content_item"><img src="img/register_3.png" alt=""></label>
+
+				<input type="radio" name="gifts" id="gifts4" value="4" hidden>
+				<label for="gifts4" class="content_item"><img src="img/register_4.png" alt=""></label>
+
+				<input type="radio" name="gifts" id="gifts5" value="5" hidden>
+				<label for="gifts5" class="content_item"><img src="img/register_5.png" alt=""></label>
+
+				<input type="radio" name="gifts" id="gifts6" value="6" hidden>
+				<label for="gifts6" class="content_item"><img src="img/register_6.png" alt=""></label>
+				<div class="clear"></div>
+			</form>
+		</div>
+
+		<div class="bottom_bt">
+			<img src="img/gifts_btn1.png">
+		</div>
+	</div>
+
+	<!-- 遮罩蒙版 -->
+	<div class="main_panel" hidden>
+	</div>
+	<div class="to_share" hidden><img src="img/to_share.png" alt=""></div>
+	<div class="btn" hidden><img src="img/share_btn.png" alt=""></div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script>
+	/*
+	 *显示和隐藏蒙版
+	 */ 
+	function showPanel() {
+		$(".main_panel").show();
+		$(".to_share").show();
+		$(".btn").show();
+	}
+
+	function hidePanel() {
+		$(".main_panel").hide();
+		$(".to_share").hide();
+		$(".btn").hide();
+	}
+
+	$('.bottom_bt').click(function(){
+		showPanel();
+	})
+	
+	$(".btn").on('click',function(){
+		hidePanel();
+		setTimeout(function(){
+			/*ajax成功后回调跳转*/
+			window.location.href = 'gifts.html';
+		},1500);
+	})
+	
+	//选中的值
+	$('input[type="radio"]').click(function(){ 
+		console.log($(this).val());//选中的值
+	});
+
+</script>
+</html>

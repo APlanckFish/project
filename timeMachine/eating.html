@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>吃东西</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/eating.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img class="head_img" src="img/eating_title.png">
+		</div>
+
+		<div class="main_content">
+			<form>
+				<input type="radio" name="foods" id="foods1" value="1" hidden>
+				<label for="foods1" class="content_item"><img src="img/eating_1.png"></label>
+				<input type="radio" name="foods" id="foods2" value="2" hidden>
+				<label for="foods2"  class="content_item"><img src="img/eating_2.png"></label>
+				<input type="radio" name="foods" id="foods3" value="3" hidden>
+				<label for="foods3" class="content_item"><img src="img/eating_3.png"></label>
+				<input type="radio" name="foods" id="foods4" value="4" hidden>
+				<label for="foods4" class="content_item"><img src="img/eating_4.png"></label>
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script>
+	$('input[type="radio"]').click(function(){ 
+		console.log($(this).val());//选中的值
+
+		/*加边框高亮*/
+		$('.content_item').css({'background':'url(img/eating_bg2.png) 100% 100% no-repeat','background-size': 'cover'});;
+
+		$(this).next().css({'background':'url(img/eating_bg3.png) 100% 100% no-repeat','background-size': 'cover'});
+
+		setTimeout(function(){
+			/*ajax成功后回调跳转*/
+			window.location.href = 'visit.html';
+		},1500);
+	});
+</script>
+</html>

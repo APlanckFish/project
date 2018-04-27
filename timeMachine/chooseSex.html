@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择性别</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/chooseSex.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img  src="img/sex_title.png">
+		</div>
+
+		<div class="main_content">
+			<form>
+				<!--选择性别-->
+				<input type="radio" name="sex" id="sex1" value="0" hidden>
+				<label for="sex1" class="sex left"><img  src="img/sex_man.png"></label>
+				<input type="radio" name="sex" id="sex2" value="1" hidden>
+				<label for="sex2" class="sex right"><img  src="img/sex_woman.png"></label>
+
+				<div class="arrow_left  leftRight"><img src="img/sex_arrow2.png"></div>
+				<div class="arrow_right rightLeft"><img src="img/sex_arrow1.png"></div>
+				<!-- <div class="arrow_left_active"><img src="img/sex_bg1.png"></div>
+				<div class="arrow_right_active"><img src="img/sex_bg1.png"></div> -->
+			</form>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script>
+	$('input[type="radio"]').on('click',function(){
+		setTimeout(function(){//延迟1500秒post数据
+			/*ajax成功后回调跳转*/
+			window.location.href = 'chooseBirth.html';
+		},1500);
+	});
+</script>
+</html>

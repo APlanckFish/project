@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>生日选择</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/chooseBirth.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title">
+			<img class="head_img" src="img/choosebirth_title.png">
+		</div>
+
+		<div class="main_content">
+			<div class="wrap">
+				<img class="wrap_bg" src="img/birth_bg.png">
+				<div class="window"><img src="img/window1.png"></div>
+				<div class="age age1" onclick='getAge1()'><img src="img/age1.png"></div>
+				<div class="age age1" hidden><img src="img/age1_1.png"></div>
+				<div class="age age2" onclick='getAge2()'><img src="img/age2.png"></div>
+				<div class="age age2" hidden><img src="img/age2_2.png"></div>
+				<div class="age age3" onclick='getAge3()'><img src="img/age3.png"></div>
+				<div class="age age3" hidden><img src="img/age3_3.png"></div>
+				<div class="age age4" onclick='getAge4()'><img src="img/age4.png"></div>
+				<div class="age age4" hidden><img src="img/age4_4.png"></div>
+				<div class="age age5" onclick='getAge5()'><img src="img/age5.png"></div>
+				<div class="age age5" hidden><img src="img/age5_5.png"></div>
+				<div class="age age6" onclick='getAge6()'><img src="img/age6.png"></div>
+				<div class="age age6" hidden><img src="img/age6_6.png"></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script>
+	var windowImg = $('.window img');
+	function getAge1() {
+		$(".age").removeClass("cur");
+		$(".age1").addClass('cur');
+		windowImg.attr({src: 'img/window1.png'});
+		postData();
+	}
+
+	function getAge2() {
+		$(".age").removeClass("cur");
+		$(".age2").addClass('cur');
+		windowImg.attr({src: 'img/window2.png'});
+		postData();
+	}
+
+	function getAge3() {
+		$(".age").removeClass("cur");
+		$(".age3").addClass('cur');
+		windowImg.attr({src: 'img/window3.png'});
+		postData();
+	}
+
+	function getAge4() {
+		$(".age").removeClass("cur");
+		$(".age4").addClass('cur');
+		windowImg.attr({src: 'img/window4.png'});
+		postData();
+	}
+
+	function getAge5() {
+		$(".age").removeClass("cur");
+		$(".age5").addClass('cur');
+		windowImg.attr({src: 'img/window5.png'});
+		postData();
+	}
+
+	function getAge6() {
+		$(".age").removeClass("cur");
+		$(".age6").addClass('cur');
+		windowImg.attr({src: 'img/window6.png'});
+		postData();
+	}
+
+	function postData() {
+		/*ajax方法,成功跳转*/
+		setTimeout(function(){//延迟1500秒post数据
+			/*ajax成功后回调跳转*/
+			window.location.href = 'chooseConstellation.html';
+		},1500);
+		
+	}
+</script>
+</html>

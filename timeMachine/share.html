@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>方式选择</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+	<link rel="stylesheet" href="css/comon.css">
+	<link rel="stylesheet" href="css/eating.css">
+</head>
+<body>
+	<div class="main_body">
+		<div class="head_title share_title">
+			<img class="head_img" src="img/share_title.png">
+		</div>
+
+		<div class="main_content">
+			<form action="">
+				<input type="radio" name="share" id="share1" value="1" hidden>
+				<label for="share1" class="content_item"><div class="bg_box"><div class="img_box"><img src="img/share_bg1.png"></div></div></label>
+
+				<input type="radio" name="share" id="share2" value="2" hidden>
+				<label for="share2" class="content_item"><div class="bg_box"><div class="img_box"><img src="img/share_bg2.png"></div></div></label>
+
+				<input type="radio" name="share" id="share3" value="3" hidden>
+				<label for="share3" class="content_item"><div class="bg_box"><div class="img_box"><img src="img/share_bg3.png"></div></div></label>
+
+				<input type="radio" name="share" id="share4" value="4" hidden>
+				<label for="share4" class="content_item"><div class="bg_box"><div class="img_box"><img src="img/share_bg4.png"></div></div></label>
+				<div class="clear"></div>
+			</form>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script>
+	$('input[type="radio"]').click(function(){ 
+		console.log($(this).val());//选中的值
+
+		/*加边框高亮*/
+		$('.content_item').css({'background':'url(img/eating_bg2.png) 100% 100% no-repeat','background-size': 'cover'});;
+
+		$(this).next().css({'background':'url(img/eating_bg3.png) 100% 100% no-repeat','background-size': 'cover'});
+
+		setTimeout(function(){
+			/*ajax成功后回调跳转*/
+			window.location.href = 'joinus.html';
+		},1500);
+	});
+</script>
+</html>
